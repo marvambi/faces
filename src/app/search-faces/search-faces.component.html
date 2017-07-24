@@ -1,21 +1,21 @@
-<div class="container">
+<div class="container col-md-8 col-md-offset-2">
   <div class="row text-center">
-    <div class="col-md-12">
+    <div class="col-md-8 col-md-offset-2">
       <h2>Find Faces From and around your city</h2>
       <a href="https://presenti.ng" target="_blank">Made for you ( Presenti.NG )</a>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 col-md-offset-3">
-      <div class="form-inline">
-        <input class="form-control input-lg input" name="place" placeholder="Location e.g Abuja" #place (keyup.enter)="search(place.value, language.value); place.value=''; language.value='';">
-        <input class="form-control input-lg input" name="language" placeholder="Profession e.g. Programmer" #language (keyup.enter)="search(place.value, language.value); place.value=''; language.value='';">
-        <button class="btn btn-primary btn-sm" (click)="search(place.value, language.value);">Search</button>
+      <div class="form-inline" style="align-content: center; clear: both; display: table; margin: auto; background-color: yellowgreen; border-radius: 5px; padding: 3px;">
+        <input class="form-control input-md input" name="place" placeholder="Location e.g Abuja" #place (keyup.enter)="search(place.value, language.value); place.value=''; language.value='';">
+        &nbsp;<input class="form-control input-md input" name="language" placeholder="Language e.g. elixir" #language (keyup.enter)="search(place.value, language.value); place.value=''; language.value='';">
+        <a href="#" role="button" class="btn btn-primary pull-right" (click)="search(place.value, language.value); false;">Search</a>
       </div>
     </div>
   </div>
   <div class="row">
-    <p class="text-center" style="padding: 1em; color:red;" *ngIf="error_text">{{ error_text }}</p>
+    <p class="alert-info" style="display: table; padding: 3px; color:red; margin: auto;" *ngIf="error_text">{{ error_text }}</p>
     <div [ngClass]="{'col-md-9': selected, 'col-md-12': !selected}">
       <div class="facer col-md-2 text-center" *ngFor="let face of faces" (click)="getDetails(face.login)">
         <div class="img_container">

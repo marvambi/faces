@@ -37,7 +37,8 @@ export class SearchFacesComponent implements OnInit {
         error => {
           this.faces = [];
           this.error_text =  "Sorry! No Faces found. You can try again however.";
-          console.error(error);
+          console.log(error);
+          (error);
         }
       )
     }
