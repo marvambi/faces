@@ -6,5 +6,5 @@
 
 ## Quick Start & Documentation
 
-[Faces Documentation](https://marvambi.com/faces)
+[Faces Documentation](https://github.com/marvambi/faces)
 
